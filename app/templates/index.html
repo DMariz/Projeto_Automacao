@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protótipo de Automação</title>
+    <title>Select Directory</title>
 </head>
 <body>
-    <h1>Protótipo de Automação</h1>
-    <form action="/process" method="post" enctype="multipart/form-data">
-        <label for="pdf_directory">Diretório com PDFs:</label>
-        <input type="text" id="pdf_directory" name="pdf_directory"><br><br>
-        <label for="template_path">Template:</label>
-        <input type="text" id="template_path" name="template_path"><br><br>
-        <label for="output_directory">Diretório de Saída:</label>
-        <input type="text" id="output_directory" name="output_directory"><br><br>
-        <button type="submit">Processar</button>
+    <h1>Select Directory</h1>
+    <form action="{{ url_for('process') }}" method="post">
+        <label for="directory">Directory:</label>
+        <input type="text" id="directory" name="directory">
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

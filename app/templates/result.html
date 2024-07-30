@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Extracted Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Extracted Text</h1>
+    <pre>{{ text }}</pre>
+    <a href="{{ url_for('index') }}">Upload another PDF</a>
+</body>
+</html>

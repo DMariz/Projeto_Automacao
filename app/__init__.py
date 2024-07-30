@@ -1,5 +1,11 @@
 from flask import Flask
+from config import Config
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    
+    from .routes import main
+    app.register_blueprint(main)
 
-from app import routes  # Importa as rotas
+    return app
